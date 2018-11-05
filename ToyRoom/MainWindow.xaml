@@ -1,0 +1,32 @@
+﻿<Window x:Class="ToysRoom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToysRoom"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TreeView x:Name="treeToys" Grid.Column="0"/>
+        <WrapPanel Grid.Column="1" Orientation="Vertical">
+            <Button Content="Load a toyroom" Margin="15,5,0,0" Click="OpenButton_Click"/>
+            <Button Content="Save a toyroom" Margin="15,5,0,0" Click="SaveButton_Click"/>
+            <Button Content="Add a new toy" Margin="15,25,0,0" Click="AddButton_Click"/>
+            <Button Content="Delete a toy" Margin="15,5,0,0" Click="DeleteButton_Click"/>
+            <Button Content="Sort by price" Margin="15,25,0,0" Click="SortByPriceButton_Click"/>
+            <Button Content="Sort by toy type" Margin="15,5,0,0" Click="SortByTypeButton_Click"/>
+            <Button Content="Sort by age" Margin="15,5,0,0" Click="SortByAgeButton_Click"/>
+            <Button Content="Sort by size" Margin="15,5,0,0" Click="SortBySizeButton_Click"/>
+            <Button Content="Sort by material" Margin="15,5,0,0" Click="SortByMaterialButton_Click"/>
+            <Label Content="Total price" Margin="15,130,0,0" IsEnabled="False"/>
+            <Label Content="" Margin="15,5,0,0" IsEnabled="False" FontWeight="Bold" x:Name="price"/>
+            <Label Content="Max price" Margin="15,5,0,0" IsEnabled="False"/>
+            <TextBox Text="1000" Margin="15,5,0,0" IsEnabled="True" FontWeight="Bold" x:Name="maxPrice"/>
+            <Button Content="Change max price" Margin="5,5,0,0" Click="maxPriceButton_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>
